@@ -1,4 +1,4 @@
-pipelineagent {
+pipeline {
   
   environment {
     registry = "192.168.2.10:5000/myfirstproject"
