@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/ejajbandi/jenkins_first_pineline_project.git'
+        git url:'https://github.com/ejajbandi/jenkins_first_pineline_project.git'
       }
     }
 
