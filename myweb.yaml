@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: 192.168.1.81:5000/justme/myweb:1
+      - image: 192.168.2.11:5000/myfirstproject
         imagePullPolicy: Always
         name: myweb
 
@@ -29,7 +29,7 @@ metadata:
   name: myweb
 spec:
   ports:
-  - nodePort: 32223
+  - nodePort: 32000
     port: 80
     protocol: TCP
     targetPort: 80
