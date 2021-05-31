@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: ejajbandi/jenkins_project:42
+      - image: ejajbandi/jenkins_project
         imagePullPolicy: Always
         name: myweb
 
