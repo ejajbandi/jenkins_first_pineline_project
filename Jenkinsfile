@@ -36,7 +36,7 @@ pipeline {
     stage('Push Image to Docker Hub') {
       steps{
         script {
-            sh 'docker push 192.168.2.10:5000/myfirstproject'
+            sh 'docker push ejajbandi/jenkins_project'
         }
       }
     }
