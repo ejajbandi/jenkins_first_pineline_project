@@ -36,7 +36,7 @@ pipeline {
     stage('Push Image to Docker Hub') {
       steps{
         script {
-            sh 'docker push ejajbandi/jenkins_project + ":$BUILD_NUMBER"'
+            sh 'docker push ejajbandi/jenkins_project:$BUILD_NUMBER'
         }
       }
     }
