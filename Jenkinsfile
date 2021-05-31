@@ -24,11 +24,14 @@ pipeline {
     }
     
     stage('Docker Login') {
+      steps{
+        script {
             withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]) {
                 sh 'docker login -u ejajbandi -p $PASSWORD'
            }
         } 
-    
+      }
+    }
     stage('Push Image to Docker Hub') {
             sh 'docker push  ejajbandi/192.168.2.10:5000/myfirstproject'
         }
