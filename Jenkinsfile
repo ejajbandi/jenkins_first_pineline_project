@@ -33,8 +33,12 @@ pipeline {
       }
     }
     stage('Push Image to Docker Hub') {
+      steps{
+        script {
             sh 'docker push  ejajbandi/192.168.2.10:5000/myfirstproject'
         }
+      }
+    }
 
     stage('Deploy App') {
       steps {
