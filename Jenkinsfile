@@ -30,17 +30,7 @@ pipeline {
     } 
     
     stage("Push Image to Docker Hub"){
-        sh 'docker push  192.168.2.10:5000/myfirstproject'
-    }
-
-    stage('Push Image') {
-      steps{
-        script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
-          }
-        }
-      }
+        sh 'docker push  ejajbandi/192.168.2.10:5000/myfirstproject'
     }
 
     stage('Deploy App') {
