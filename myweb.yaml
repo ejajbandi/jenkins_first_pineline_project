@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: ejajbandi/192.168.2.10:5000/myfirstproject
+      - image: ejajbandi/jenkins_project
         imagePullPolicy: Always
         name: myweb
 
