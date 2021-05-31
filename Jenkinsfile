@@ -1,7 +1,8 @@
 pipeline {
   
   environment {
-    registry = "192.168.2.10:5000/myfirstproject"
+    registry = "ejajbandi/jenkins_project"
+    registryCredential = 'DOCKER_HUB_PASSWORD' 
     dockerImage = ""
   }
 
