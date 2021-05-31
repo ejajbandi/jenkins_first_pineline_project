@@ -22,6 +22,7 @@ pipeline {
         }
       }
     }
+    
     stage("Docker Login"){
         withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]) {
             sh 'docker login -u ejajbandi -p $PASSWORD'
@@ -29,7 +30,7 @@ pipeline {
     } 
     
     stage("Push Image to Docker Hub"){
-        sh 'docker push  rahulwagh17/jhooq-docker-demo:jhooq-docker-demo'
+        sh 'docker push  192.168.2.10:5000/myfirstproject'
     }
 
     stage('Push Image') {
