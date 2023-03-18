@@ -16,7 +16,7 @@ spec:
         app: myweb1
     spec:
       containers:
-      - image: ejajbandi/jenkins_project:1
+      - image: ejajbandi/jenkins_project:3
         imagePullPolicy: Always
         name: myweb1
 
