@@ -3,36 +3,36 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: myweb
-  name: myweb
+    app: myweb1
+  name: myweb1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myweb
+      app: myweb1
   template:
     metadata:
       labels:
-        app: myweb
+        app: myweb1
     spec:
       containers:
-      - image: ejajbandi/jenkins_project:66
+      - image: ejajbandi/jenkins_project:01
         imagePullPolicy: Always
-        name: myweb
+        name: myweb1
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: myweb
-  name: myweb
+    app: myweb1
+  name: myweb1
 spec:
   ports:
-  - nodePort: 32224
-    port: 80
+  - nodePort: 32225
+    port: 81
     protocol: TCP
     targetPort: 80
   selector:
-    app: myweb
+    app: myweb1
   type: NodePort
